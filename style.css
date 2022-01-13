@@ -3,9 +3,7 @@
 *, *::before, *::after{
   box-sizing: border-box;
   font-family: 'Nova Square', cursive;
-  /* font-family: 'Caveat', cursive; */
   font-weight: normal;
-  /* font-family: Poppins; */
 }
 
 body {

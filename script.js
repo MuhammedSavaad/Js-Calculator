@@ -10,3 +10,5 @@ function FormValidation(){
 if(localStorage.getItem("FormValidated")=="true"){
     popup.classList.add("hide");
 }
+
+// localStorage.removeItem("FormValidated");
