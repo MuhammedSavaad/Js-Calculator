@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 *, *::before, *::after{
   box-sizing: border-box;
   font-family: 'Nova Square', cursive;
+  /* font-family: 'Caveat', cursive; */
   font-weight: normal;
   /* font-family: Poppins; */
 }
@@ -28,7 +31,7 @@ body {
 .calc-grid > button {
   cursor: pointer;
   font-size: 2rem;
-  border: 2px solid white;
+  border: 1px solid white;
   border-color: #050910;
   outline: none;
   color: #fff;
@@ -73,4 +76,14 @@ button.less-weight {
 button.result {
   background-color: rgb(7, 7, 223);
   color: white !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .calc-grid {
+    grid-template-columns: repeat(4, 66px);
+    grid-template-rows: minmax(10px, auto) repeat(5, 65px);
+  }
+  .calc-grid > button {
+    font-size: 1.5rem;
+  }
 }
