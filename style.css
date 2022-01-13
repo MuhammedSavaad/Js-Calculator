@@ -99,13 +99,11 @@ button.result {
   box-shadow: 0 5px 30px rgba(0, 0, 0, .30);
   background: #fff;
   border-radius: 5px;
-  transition: 0.5s;
   top: 50%;
 }
 #popup.hide{
   visibility: hidden;
   opacity: 0;
-  transition: 0.5s;
 }
 #popup input[type="text"] {
   height: 40px;
@@ -120,4 +118,29 @@ button.result {
   width: 200px;
   cursor: pointer;
   height: 30px;
+}
+
+body.hide .calc-grid {
+  opacity: 0;
+}
+
+.footer_section {
+  color: #fff;
+  padding-top: 60px;
+  text-align: center;
+}
+.footer_section a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer_section {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    text-align: center;
+    margin-left: 100px;
+  }
 }
