@@ -90,6 +90,17 @@ button.result {
   .calc-grid > button {
     font-size: 1.5rem;
   }
+  .output_area input {
+    height: 90px;
+    margin-left: -18px;
+    width: 262px;
+    display: flex-start;
+    margin-top: -16px;
+    text-align: end;
+    padding-right: 10px;
+    background: white;
+  }
+  
 }
 
 /* PopUp --- */
