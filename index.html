@@ -25,37 +25,64 @@
 
     <div class="calc-grid">
         <div class="output_area">
-            <div class="prev-operand">125 +</div>
-            <div class="current-operand">456</div>
+            <input id="output-screen" type="text" placeholder="0" disabled class="current-operand"></input>
         </div>
 
-        <button class="span-2 less-weight">AC</button>
-        <button class="less-weight">DEL</button>
-        <button class="less-weight">÷</button>
+        <button onclick="Clear()" class="span-2 less-weight">AC</button>
+        <button onclick="Delete()" class="less-weight">DEL</button>
+        <button onclick="Display('/')" class="less-weight">÷</button>
 
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="less-weight">x</button>
+        <button onclick="Display('1')">1</button>
+        <button onclick="Display('2')">2</button>
+        <button onclick="Display('3')">3</button>
+        <button onclick="Display('*')" class="less-weight">x</button>
 
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="less-weight">+</button>
+        <button onclick="Display('4')">4</button>
+        <button onclick="Display('5')">5</button>
+        <button onclick="Display('6')">6</button>
+        <button onclick="Display('+')" class="less-weight">+</button>
 
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="less-weight">-</button>
+        <button onclick="Display('7')">7</button>
+        <button onclick="Display('8')">8</button>
+        <button onclick="Display('9')">9</button>
+        <button onclick="Display('-')" class="less-weight">-</button>
 
-        <button class="less-weight">.</button>
-        <button class="less-weight">0</button>
-        <button class="span-2 less-weight result">=</button>
+        <button onclick="Display('.')" class="less-weight">.</button>
+        <button onclick="Display('0')" class="less-weight">0</button>
+        <button onclick="Calculate()" class="span-2 less-weight result">=</button>
     </div>
 
     <div class="footer_section">
         <p>Created By <a href="https://www.instagram.com/__.savaad___/" style="color: rgb(33, 197, 33);">@__savaad___</a></p>
     </div>
+    <script>
+        // ========= Calculator Functions!!.... ============
+        let outputScreen = document.getElementById("output-screen");
+
+        function Display(number){
+            outputScreen.value += number;
+        }
+
+        function Calculate(){
+            if(outputScreen.value == ''){
+                alert("Numbers Not Found")
+            } else {
+                try {
+                    outputScreen.value = eval(outputScreen.value);
+                } catch (err){
+                    alert("Invalid Expression!!..")
+                }
+            }
+        }
+
+        function Clear(){
+            outputScreen.value = '';
+        }
+
+        function Delete() {
+            outputScreen.value = outputScreen.value.slice(0, -1);
+        }
+    </script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// * ========= POP UP FUNCTIONS =======
 var popup = document.getElementById("popup");
 var body = document.body;
 
